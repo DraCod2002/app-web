@@ -1,0 +1,29 @@
+<!-- agregar-proveedor.component.html -->
+<div class="container">
+    <div class="container text-center text-white" style="margin: 30px">
+      <h3>Agregar Proveedor</h3>
+    </div>
+    <div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
+      <div class="card-body">
+        <form (ngSubmit)="onSubmit()">
+          <div class="mb-3">
+            <label for="nombre" class="form-label text-uppercase fw-bold">Nombre del Proveedor</label>
+            <input type="text" id="nombre" class="form-control" 
+                   placeholder="Ingresa Nombre" name="nombre" required="true"
+                   [(ngModel)]="proveedor.nombre">
+          </div>
+          <div class="mb-3">
+            <label for="direccion" class="form-label text-uppercase fw-bold">Dirección</label>
+            <input type="text" name="direccion" id="direccion" class="form-control" 
+                   placeholder="Ingresa Dirección"
+                   [(ngModel)]="proveedor.direccion">
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary me-3">Agregar</button>
+            <a href="/" class="btn btn-success">Regresar</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
